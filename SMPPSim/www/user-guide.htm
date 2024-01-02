@@ -501,7 +501,7 @@ ESME_TO_ESME routing does not. Note that LOOPBACK and ESME_TO_ESME may not both 
 
 						DELIVERY_MESSAGES_PER_MINUTE=0
 						<br>
-						DELIVER_MESSAGES_FILE=deliver_messages.csv
+						DELIVER_MESSAGES_FILE=mo/deliver_messages.csv
 					</p>
 					<p>
 						# LOOPBACK
@@ -715,7 +715,7 @@ DELAYED_INBOUND_QUEUE_MAX_ATTEMPTS=50
 						</b>
 						<br>
 						SMPPSim includes a feature known as the MO Service. By setting the DELIVERY_MESSAGES_PER_MINUTE property to a non-zero value, SMPPSim will periodically send a DELIVER_SM message to your application. The messages themselves are defined in a file
-						whose name you specify in the configuration (by default it is deliver_messages.csv. Message records in this file are represented in comma separated format consisting of the source address, destination address and short message content. The message content can 
+						whose name you specify in the configuration (by default it is mo/deliver_messages.csv. Message records in this file are represented in comma separated format consisting of the source address, destination address and short message content. The message content can 
 						either be a plain text message or a binary message. Messages are designated as binary by prefixing them with 0x and then formulating the message in hexadecimal notation, representing each byte value with a pair of hexadecimal digits. e.g. to include message "1234" in binary format, the
 						short message field in the MO service input file should be specified as 0x31323334. For binary messages, data_coding will automatically be set to 4 by SMPPSim.<br><br>
 						Once again, as with all three of the Mobile Originated Message features of SMPPSim, your application must bind as a receiver at least once for there to be a path available to SMPPSim for the delivery of such messages.
