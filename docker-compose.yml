@@ -8,8 +8,8 @@ services:
       - "2775:2775"
       - '8884:${HTTP_PORT:-8884}'
     volumes:
-      - smppsim_conf:/app/smppsim/conf
-      - smppsim_mo:/app/smppsim/mo
+      - smppsim_conf:/app/conf
+      - smppsim_mo:/app/mo
     environment:
       SMPP_PORT: ${SMPP_PORT:-2775}
       SMPP_CONNECTION_HANDLERS: ${SMPP_CONNECTION_HANDLERS:-1}
